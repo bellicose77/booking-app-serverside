@@ -6,7 +6,7 @@ const port = 8000;
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
   })
-n:dulal
+// n:dulal
 
 
-pass:CSZ4YRMGaI3momBN
+// pass:CSZ4YRMGaI3momBN
