@@ -3,7 +3,9 @@ import express from 'express';
 const app = express();
 const port = 8000;
 
-app.listen()
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
 n:dulal
 
 
