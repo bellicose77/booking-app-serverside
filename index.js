@@ -1,11 +1,13 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import mongoose  from 'mongoose';
 const app = express();
 dotenv.config();
 const port = 8000;
 const connect = async () =>{
   try{
-    await moongoose.config(process.env.MONGO)
+    await mongoose.connect(process.env.MONGO)
+    console.log("connected to mongodb")
   } catch(error){
     throw error;
   }
@@ -13,6 +15,7 @@ const connect = async () =>{
 }
 
 app.listen(port, () => {
+    connect()
     console.log(`Example app listening on port ${port}`)
   })
 // n:dulal
