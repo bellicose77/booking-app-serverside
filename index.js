@@ -13,7 +13,8 @@ const connect = async () =>{
     throw error;
   }
 
-}
+};
+app.use('/api/auth',authRoute);
 
 app.listen(port, () => {
     connect()
