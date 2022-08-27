@@ -19,6 +19,9 @@ const connect = async () =>{
 
 };
 app.use('/api/auth',authRoute);
+app.use('/api/user',userRoute);
+app.use('/api/room',roomRoute);
+app.use('/api/hotel',hotelRoute);
 
 app.listen(port, () => {
     connect()
