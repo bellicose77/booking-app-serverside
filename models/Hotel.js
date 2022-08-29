@@ -15,14 +15,14 @@ const hotelSchema = mongoose.Schema({
     },
     address:{
         type: String,
-        require: true
+        required: true
     },
     distance:{
         type: Number,
-        require: true
+        required: true
     },
     photos:{
-        type: String
+        type: [String]
     },
     title:{
         type: String
