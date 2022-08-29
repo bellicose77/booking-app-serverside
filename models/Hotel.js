@@ -5,5 +5,13 @@ const hotelSchema = mongoose.Schema({
     name:{
         type:String,
         required: true
-    }
+    },
+    type:{
+        type: String,
+        required: true
+    },
+    city:{
+        type: String
+    },
+    
 })
