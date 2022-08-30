@@ -19,7 +19,7 @@ router.post("/",async(req,res)=>{
 router.put('/:id', async(req,res)=>{
     try{
         const updateHotel = await Hotel.findByIdAndUpdate()
-        res.status(200).json(savedHotel);
+        res.status(200).json(updateHotel);
 
     }catch(err){
           res.status(500).json(err);
