@@ -38,6 +38,11 @@ router.delete('/:id',async(req,res)=>{
     catch(err){
         res.status(500).json(err);
     }
+});
+
+// Get single data
+router.get('/:id',async(req,res)=>{
+    
 })
 
 
