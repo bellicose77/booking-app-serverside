@@ -31,10 +31,11 @@ router.put('/:id', async(req,res)=>{
 // delete api
 router.delete('/:id',async(req,res)=>{
     try{
+        await Hotel.delete(req.params.id)
 
     }
     catch(err){
-        
+
     }
 })
 
