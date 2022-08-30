@@ -18,7 +18,7 @@ router.post("/",async(req,res)=>{
 //update api 
 router.put('/:id', async(req,res)=>{
     try{
-        const savedHotel = await newHotel.save();
+        const updateHotel = await Hotel.findByIdAndUpdate()
         res.status(200).json(savedHotel);
 
     }catch(err){
