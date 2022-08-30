@@ -49,7 +49,10 @@ router.get('/:id',async(req,res)=>{
     }catch(err){
           res.status(500).json(err);
     }
-})
+});
+
+// get all data
+
 
 
 export default router
