@@ -28,5 +28,15 @@ router.put('/:id', async(req,res)=>{
     }
 });
 
+// delete api
+router.delete('/:id',async(req,res)=>{
+    try{
+
+    }
+    catch(err){
+        
+    }
+})
+
 
 export default router
