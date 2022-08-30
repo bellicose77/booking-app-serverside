@@ -18,6 +18,8 @@ const connect = async () =>{
   }
 
 };
+// Middel ware
+app.use(express.json())
 app.use('/api/auth',authRoute);
 app.use('/api/user',userRoute);
 app.use('/api/room',roomRoute);

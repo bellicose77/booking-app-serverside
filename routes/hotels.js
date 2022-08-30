@@ -1,5 +1,5 @@
 import express from 'express';
-import Hotel from '../models/Hotel';
+import Hotel from '../models/Hotel.js';
 
 const router = express.Router()
 
@@ -13,6 +13,11 @@ router.post("/",async(req,res)=>{
     }catch(err){
           res.status(500).json(err);
     }
+});
+
+//update api 
+router.put('/:id', async(req,res)=>{
+    
 })
 
 export default router
