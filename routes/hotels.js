@@ -43,7 +43,7 @@ router.delete('/:id',async(req,res)=>{
 // Get single data
 router.get('/:id',async(req,res)=>{
     try{
-        const hotel = await Hotel.find(req.params.id)
+        const hotel = await Hotel.findById(req.params.id)
         res.status(200).json(hotel);
 
     }catch(err){
