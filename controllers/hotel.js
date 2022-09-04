@@ -9,7 +9,7 @@ export const createHotel = async (req,res,next)=>{
     }catch(err){
           next(err);
     }
-}
+};
 export const updateHotel = async (req,res,next)=>{
     try{
         const updateHotel = await Hotel.findByIdAndUpdate(req.params.id,
@@ -20,4 +20,13 @@ export const updateHotel = async (req,res,next)=>{
     }catch(err){
           next(err);
     }
-}
+};
+export const deleteHotel = async (req,res,next)=>{
+    
+};
+export const getHotel = async (req,res,next)=>{
+    
+};
+export const getHotels = async (req,res,next)=>{
+    
+};
