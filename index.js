@@ -28,7 +28,12 @@ app.use('/api/hotel',hotelRoute);
 app.use((err,req,res,next)=>{
   const errStatus = err.status || 500
   const errMessage = err.message || "Something went to wrong"
- return res.status(500).json("Error from handlder")
+ return res.status(errStatus).json({
+  success:false,
+  status: errStatus,
+  message: errMessage,
+  stack:err.stack
+ })
 })
 
 app.listen(port, () => {
