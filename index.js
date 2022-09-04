@@ -25,6 +25,8 @@ app.use('/api/user',userRoute);
 app.use('/api/room',roomRoute);
 app.use('/api/hotel',hotelRoute);
 
+app.use(err,req,res,next)
+
 app.listen(port, () => {
     connect()
     console.log(`Example app listening on port ${port}`)
