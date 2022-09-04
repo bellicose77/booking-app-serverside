@@ -1,5 +1,5 @@
 import express from 'express';
-import { createHotel, updateHotel } from '../controllers/hotel.js';
+import { createHotel, deleteHotel, updateHotel } from '../controllers/hotel.js';
 import Hotel from '../models/Hotel.js';
 import { createError } from '../utils/error.js';
 
@@ -12,17 +12,7 @@ router.post("/",createHotel);
 router.put('/:id', updateHotel);
 
 // delete api
-router.delete('/:id',async(req,res)=>{
-    try{
-
-        await Hotel.findByIdAndDelete(req.params.id);
-        res.status(200).json("data deleted successfully");
-
-    }
-    catch(err){
-        res.status(500).json(err);
-    }
-});
+router.delete('/:id',deleteHotel);
 
 // Get single data
 router.get('/:id',async(req,res)=>{
