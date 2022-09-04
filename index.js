@@ -26,6 +26,8 @@ app.use('/api/room',roomRoute);
 app.use('/api/hotel',hotelRoute);
 
 app.use((err,req,res,next)=>{
+  const errStatus = err.status || 500
+  const errMessage = err.message || "Something went to wrong"
  return res.status(500).json("Error from handlder")
 })
 
