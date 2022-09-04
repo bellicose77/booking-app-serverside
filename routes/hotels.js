@@ -1,5 +1,5 @@
 import express from 'express';
-import { createHotel, deleteHotel, getHotel, updateHotel } from '../controllers/hotel.js';
+import { createHotel, deleteHotel, getHotel, getHotels, updateHotel } from '../controllers/hotel.js';
 import Hotel from '../models/Hotel.js';
 import { createError } from '../utils/error.js';
 
@@ -18,17 +18,7 @@ router.delete('/:id',deleteHotel);
 router.get('/:id',getHotel);
 
 // get all data
-router.get('/',async(req,res,next)=>{
-   
-    try{
-       const hotels = await Hotel.find()
-        res.status(200).json(hotels);
-
-    }catch(err){
-          res.status(500).json(err);
-          //next(err);
-    }
-})
+router.get('/',getHotels)
 
 
 export default router
