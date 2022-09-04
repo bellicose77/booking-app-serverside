@@ -54,14 +54,16 @@ router.get('/:id',async(req,res)=>{
 
 // get all data
 router.get('/',async(req,res,next)=>{
+    console.log("from route");
+    next()
     try{
-        //onst hotels = await Hotel.find()
-        const hotels = await Hotel.findById('asdddfs')
+        const hotels = await Hotel.find()
+        //const hotels = await Hotel.findById('asdddfs')
         res.status(200).json(hotels);
 
     }catch(err){
-         // res.status(500).json(err);
-          next();
+         res.status(500).json(err);
+          //next();
     }
 })
 
