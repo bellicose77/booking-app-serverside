@@ -25,8 +25,8 @@ app.use('/api/user',userRoute);
 app.use('/api/room',roomRoute);
 app.use('/api/hotel',hotelRoute);
 
-app.use((req,res,next)=>{
-  res.send("from middel ware")
+app.use((err,req,res,next)=>{
+ return res.status(500).json("Error from handlder")
 })
 
 app.listen(port, () => {
