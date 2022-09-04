@@ -26,7 +26,7 @@ app.use('/api/room',roomRoute);
 app.use('/api/hotel',hotelRoute);
 
 app.use((err,req,res,next)=>{
-  
+  return res.status(500).json("error handling from middel ware")
 })
 
 app.listen(port, () => {
