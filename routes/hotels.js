@@ -55,6 +55,7 @@ router.get('/:id',async(req,res)=>{
 // get all data
 router.get('/',async(req,res,next)=>{
     const failed = true;
+    const err = new Error()
     err.status = 404;
     err.message = "Sorry not found";
     if(failed) return next(err)
