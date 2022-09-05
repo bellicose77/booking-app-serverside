@@ -1,4 +1,5 @@
 import User from "../models/User.js"
+import bcrypt from "bcrypt"
 
 export const register = async(req,res,next)=>{
 try{
@@ -12,7 +13,18 @@ try{
     await newUser.save();
     res.status(200).json("user created successfully");
 
-}catch(err){
+} catch(err){
     next(err)
+  }
 }
-}
+
+export const login = async(req,res,next)=>{
+    try{
+        
+        res.status(200).json("user created successfully");
+    
+    } catch(err){
+        next(err)
+     
+    }
+    }
