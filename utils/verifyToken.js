@@ -13,4 +13,8 @@ export const verifyToken=(req,res,next)=>{
          next();
     })
 
-}
+};
+
+export const verifyUser = (req,res,next)=>{
+
+};
