@@ -3,17 +3,18 @@ import
 { createHotel, deleteHotel, getHotel, getHotels, updateHotel } 
 from '../controllers/hotel.js';
 import { createError } from '../utils/error.js';
+import { verifyAdmin } from '../utils/verifyToken.js';
 
 const router = express.Router()
 
 // Create api
-router.post("/",createHotel);
+router.post("/",verifyAdmin,createHotel);
 
 //update api 
-router.put('/:id', updateHotel);
+router.put('/:id',verifyAdmin, updateHotel);
 
 // delete api
-router.delete('/:id',deleteHotel);
+router.delete('/:id',verifyAdmin,deleteHotel);
 
 // Get single data
 router.get('/:id',getHotel);
