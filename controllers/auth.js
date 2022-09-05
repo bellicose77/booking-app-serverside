@@ -20,7 +20,9 @@ try{
 
 export const login = async(req,res,next)=>{
     try{
-        
+        const user = await User.findOne({
+            
+        })
         res.status(200).json("user created successfully");
     
     } catch(err){
