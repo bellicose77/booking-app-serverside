@@ -1,5 +1,6 @@
 import User from "../models/User.js"
 import bcrypt from "bcrypt"
+import { createError } from "../utils/error.js";
 
 export const register = async(req,res,next)=>{
 try{
@@ -21,8 +22,9 @@ try{
 export const login = async(req,res,next)=>{
     try{
         const user = await User.findOne({
-            
+           username:req.body.username 
         })
+        if(!username) return next(createError(404,"user is not found"))
         res.status(200).json("user created successfully");
     
     } catch(err){
