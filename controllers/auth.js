@@ -37,7 +37,7 @@ export const login = async(req,res,next)=>{
           );
       
             const{password,isAdmin,...other} = user._doc;
-        res.status(200).json({...other});
+        res.cookie().status(200).json({...other});
         
     
     } catch(err){
