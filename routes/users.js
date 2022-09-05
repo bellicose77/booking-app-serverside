@@ -16,13 +16,13 @@ const router = express.Router()
 // });
     
 
-router.put('/:id',updateUser);
+router.put('/:id',verifyUser, updateUser);
 //delete api
-router.delete('/:id',deleteUser);
+router.delete('/:id',verifyUser ,deleteUser);
 //get user
-router.get('/:id',getUser);
+router.get('/:id',verifyUser ,getUser);
 //get all users
-router.get('/',getUsers);
+router.get('/',verifyAdmin, getUsers);
 
 
 export default router
