@@ -19,8 +19,9 @@ export const createRoom = async(req,res,next)=>{
         next();
     }
 };
-export const updateRoom = (req,res,next)=>{
+export const updateRoom = async (req,res,next)=>{
     try{
+        const updateroom = await Room.findByIdAndUpdate()
 
     }catch(err){
         next(err);
