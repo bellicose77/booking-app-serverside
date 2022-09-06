@@ -18,4 +18,11 @@ export const createRoom = async(req,res,next)=>{
     }catch(err){
         next();
     }
+};
+export const updateRoom = (req,res,next)=>{
+    try{
+
+    }catch(err){
+        next(err);
+    }
 }
