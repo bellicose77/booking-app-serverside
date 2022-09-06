@@ -19,19 +19,12 @@ const roomSchema = new  mongoose.Schema({
          min: 0,
          max: 5
     },
-    rooms:{
-        type: [String]
-    },
-    chepestPrice:{
-        type: Number,
-        required: true
-    },
-    featured:{
-        type: Boolean,
-        default: false
-    }
+    roomNumbers: [{ number: Number, unavailableDates: {type: [Date]}}],
+    
 
 
 
-});
+},
+{ timestamps: true }
+);
 export default mongoose.model("Room",roomSchema);
