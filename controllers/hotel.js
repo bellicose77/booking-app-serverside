@@ -65,7 +65,7 @@ export const countByCity = async (req,res,next)=>{
            next(err);
      }
 };
-export const countByCity = async (req,res,next)=>{
+export const countByType = async (req,res,next)=>{
     const cities = req.query.cities.split(",")
     try{
        const list = await Promise.all(

@@ -1,6 +1,7 @@
 import express from 'express';
 import 
 { countByCity,
+    countByType,
 createHotel, deleteHotel, getHotel, getHotels, updateHotel } 
 from '../controllers/hotel.js';
 import { createError } from '../utils/error.js';
@@ -23,7 +24,7 @@ router.get('/find/:id',getHotel);
 // get all data
 router.get('/',getHotels)
 router.get('/countByCity',countByCity);
-router.get('/countByType',countByType)
+router.get('/countByType',countByType);
 
 
 export default router
