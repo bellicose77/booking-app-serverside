@@ -18,12 +18,12 @@ router.put('/:id',verifyAdmin, updateHotel);
 router.delete('/:id',verifyAdmin,deleteHotel);
 
 // Get single data
-router.get('/:id',getHotel);
+router.get('/find/:id',getHotel);
 
 // get all data
 router.get('/',getHotels)
 router.get('/countByCity',countByCity);
-router.get('/countByType',countByType)
+//router.get('/countByType',countByType)
 
 
 export default router
