@@ -6,6 +6,7 @@ import userRoute from './routes/users.js'
 import roomRoute from './routes/rooms.js'
 import hotelRoute from './routes/hotels.js'
 import cookieParser from 'cookie-parser';
+import cors from 'cors'
 
 const app = express();
 dotenv.config();
@@ -20,8 +21,10 @@ const connect = async () =>{
 
 };
 // Middel ware
-app.use(cookieParser())
-app.use(express.json())
+app.use(cors())
+app.use(cookieParser());
+app.use(express.json());
+
 app.use('/api/auth',authRoute);
 app.use('/api/user',userRoute);
 app.use('/api/room',roomRoute);
