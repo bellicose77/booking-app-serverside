@@ -1,6 +1,7 @@
 import express from 'express';
 import 
-{ createHotel, deleteHotel, getHotel, getHotels, updateHotel } 
+{ countByCity,
+createHotel, deleteHotel, getHotel, getHotels, updateHotel } 
 from '../controllers/hotel.js';
 import { createError } from '../utils/error.js';
 import { verifyAdmin } from '../utils/verifyToken.js';
