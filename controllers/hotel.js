@@ -88,3 +88,12 @@ export const countByType = async (req,res,next)=>{
            next(err);
      }
 };
+
+export const getHotelRooms = async(req,res,next)=>{
+    try{
+
+    }catch(err){
+        next(err)
+    }
+
+}
